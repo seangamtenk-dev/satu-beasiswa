@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7faff">
+  <title>Admin — SatuBeasiswa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+  <header class="header admin-header"><a class="brand" href="index.html"><span class="brand-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4 36 13v14L20 36 4 27V13z" fill="currentColor" opacity=".13"/><path d="m11 16 9-5 9 5-9 5zM14 19v6c4 3 8 3 12 0v-6M29 16v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-name">satu<span>beasiswa</span></span></a><a class="admin-back" href="index.html">← Kembali ke portal</a></header>
+  <main class="admin-main">
+    <section class="admin-login" id="loginPanel"><span class="admin-lock">⌑</span><div class="eyebrow">AREA PENGELOLA</div><h1>Masuk ke dashboard admin.</h1><p>Kelola pendaftaran dan tinjau berkas kandidat beasiswa.</p><form id="loginForm"><label>Nama pengguna<input name="username" autocomplete="username" required value="admin"></label><label>Kata sandi<input name="password" type="password" autocomplete="current-password" required placeholder="Masukkan kata sandi"></label><button class="button button-primary" type="submit">Masuk <span>↗</span></button><p id="loginMessage" class="admin-message" role="status"></p></form><div class="demo-hint">Akses admin ditentukan oleh pemilik portal.</div></section>
+    <section class="dashboard" id="dashboard" hidden><div class="dashboard-heading"><div><div class="eyebrow">DASHBOARD PENGELOLA</div><h1>Monitoring pendaftar</h1><p>Periksa data, baca motivasi, lalu tetapkan hasil seleksi.</p></div><div class="dashboard-actions"><button id="refreshButton" class="button button-outline">↻ Perbarui</button><button id="logoutButton" class="button button-dark">Keluar</button></div></div><div class="admin-stats"><article><span>Total pendaftar</span><strong id="totalCount">0</strong></article><article><span>Perlu ditinjau</span><strong id="pendingCount">0</strong></article><article><span>Diterima</span><strong id="acceptedCount">0</strong></article><article><span>Ditolak</span><strong id="rejectedCount">0</strong></article></div><div class="application-toolbar"><div class="admin-tabs"><button class="admin-tab active" data-status="all">Semua</button><button class="admin-tab" data-status="submitted">Perlu ditinjau</button><button class="admin-tab" data-status="accepted">Diterima</button><button class="admin-tab" data-status="rejected">Ditolak</button></div><input id="adminSearch" type="search" placeholder="Cari nama, email, atau beasiswa…" aria-label="Cari pendaftar"></div><p id="dashboardMessage" class="admin-message" role="status"></p><div id="applicationsList" class="applications-list"></div><div id="emptyState" class="empty-state" hidden>Belum ada pendaftaran pada kategori ini.</div></section>
+  </main>
+  <footer class="admin-footer">SatuBeasiswa · Dashboard pengelolaan lokal</footer>
+  <script src="admin.js"></script>
+</body>
+</html>
+
