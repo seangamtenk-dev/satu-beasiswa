@@ -1,19 +1,7 @@
 # SatuBeasiswa
 
 Portal beasiswa dengan formulir pendaftaran, kode pelacakan, pemantauan status, dan dashboard admin. Frontend ada di `public/`.
-
-## Menjalankan versi lokal
-
-Versi lokal memakai Python standar dan SQLite. Dari folder proyek:
-
-```powershell
-cd "C:\Users\SEAN\Documents\Codex\2026-11-14\hi\outputs\beasiswa"
-$env:BEASISWA_ADMIN_PASSWORD = 'KataSandiAdminYangKuat!'
-python server.py
-```
-
-Buka `http://127.0.0.1:8000/` untuk portal dan `http://127.0.0.1:8000/admin.html` untuk admin. Server hanya mengikat ke komputer lokal. Jika kata sandi tidak diatur sebelum database lokal pertama kali dibuat, kredensial demo: `admin` / `PortalBeasiswa2026!`.
-
+ 
 ## Menyiapkan GitHub + Vercel
 
 Versi deploy memakai FastAPI di Vercel Functions dan PostgreSQL terkelola. Vercel mendeteksi aplikasi FastAPI dari `app.py`; aset statis disajikan dari `public/`. Lihat [panduan FastAPI Vercel](https://vercel.com/docs/frameworks/backend/fastapi).
